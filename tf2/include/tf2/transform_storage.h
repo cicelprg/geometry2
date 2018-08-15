@@ -35,14 +35,16 @@
 #include <tf2/LinearMath/Vector3.h>
 #include <tf2/LinearMath/Quaternion.h>
 
-#include <ros/message_forward.h>
-#include <ros/time.h>
-#include <ros/types.h>
+#include <geometry_msgs/transform_stamped.h>
+#include "tf2/time.h"
+// #include <ros/message_forward.h>
+// #include <ros/time.h>
+// #include <ros/types.h>
 
-namespace geometry_msgs
-{
-ROS_DECLARE_MESSAGE(TransformStamped);
-}
+// namespace geometry_msgs
+// {
+// ROS_DECLARE_MESSAGE(TransformStamped);
+// }
 
 namespace tf2
 {
@@ -75,7 +77,7 @@ public:
 
   tf2::Quaternion rotation_;
   tf2::Vector3 translation_;
-  ros::Time stamp_;
+  Time stamp_;
   CompactFrameID frame_id_;
   CompactFrameID child_frame_id_;
 };
